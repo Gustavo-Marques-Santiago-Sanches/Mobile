@@ -1,7 +1,8 @@
 import {useFonts, SpaceGrotesk_300Light, SpaceGrotesk_700Bold} from '@expo-google-fonts/space-grotesk';
 
-import Produto from './src/Telas/Produto';
+import Produto from './src/Telas/Produtos/Index';
 import { View } from 'react-native';
+import mock from './src/mocks/Produto';
 
 export default function App() {
   //Carrega a fonte para o meu projeto
@@ -15,5 +16,5 @@ export default function App() {
     return <View />
   }
 
-  return <Produto />
+  return <Produto {...mock}/>
 }
