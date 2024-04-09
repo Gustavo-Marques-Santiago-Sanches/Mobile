@@ -9,8 +9,8 @@ const produto = {
         logo: Logo,
         detalhes: "Uma linda e fofa pantufa para você presentear sua amada!",
         preco: "R$ 37,00",
-        botao: "Adicionar a Lista de Desejos",
-    }
+        botao: "Adicionar a Lista de Desejos", 
+    },
 }
 
 export default produto;
