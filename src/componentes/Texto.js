@@ -9,10 +9,10 @@ export default function Texto({children, style}){
     //Verifica se deve exibir a fonte em negrito
     if(style?.fontWeight=="bold"){
        //Negrito, muda a estilização
-       estilo = style.textoNegrito; 
+       estilo = styles.textoNegrito; 
     }
 
-    return <Text style={[style, estilo]}>{children}</Text>
+    return <Text style={[style,estilo]}>{children}</Text>
 }
 
 const styles = StyleSheet.create({
@@ -21,5 +21,6 @@ const styles = StyleSheet.create({
     },
     textoNegrito :{
         fontFamily: "SpaceGBold",
-    }
-})
+        fontWeight: "normal",
+    },
+});
