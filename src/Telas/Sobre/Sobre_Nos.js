@@ -7,19 +7,10 @@ import Texto from '../../componentes/Texto'; //Componente de exibição de texto
 export default function Sobre({tela}){
 
     return <ScrollView style={Style.fundo}>
-    <Image style={Style.logo} source={tela.logo}/>
-    <Texto style={Style.desc}>{tela.descricao}</Texto>
+    <Image style={Style.logo} source={tela.logo} resizeMode='contain'/>
+    <Texto style={Style.desc}>{tela.descricao_pri}</Texto>
+    <Texto style={Style.titulo}>{tela.obj}</Texto>
+    <Texto style={Style.desc}>{tela.descricao_sec}</Texto>
     <Image style={Style.imagem} source={tela.img}/>
   </ScrollView>
-    
-    {/* <FlatList 
-            data={itens.lista}
-            renderItem={Item}
-            keyExtractor={itens.lista.id}
-            ListHeaderComponent={()=>{
-                return <>
-                    <Detalhes {...tela}/>
-                </>
-            }}
-        /> */}
 }

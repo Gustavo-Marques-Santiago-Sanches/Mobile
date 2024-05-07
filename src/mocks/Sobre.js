@@ -4,7 +4,9 @@ import lado_direito from '../../assets/pantufa.png';
 const sobre = {
     tela: {
         logo: Logo,
-        descricao: "AFmsoafnasifunadsifa fasnfasfasf a anfjdsakfan gs njsifnsdjjjdfndjnfsdjkfsd jn sjgkndsjngkjsndgkjnsdjkfnsdnfvkjsdnvkjsd jv jksnvkjsngjsnjkfns jksnsjknjksndvjksndjgnsjkvsjkdnvcjksdngjksdnjkfsnjk nsjkgnsjk nsjk nkjsn gjsnjk dnkjnvsjkn gjkenjk nskjnvjkensjknk ngjsnjk nvjknsj nvjsjdnvjksnev snvnxklv sj nejv sjk njcns jvsn jke aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa AFmsoafnasifunadsifa fasnfasfasf a anfjdsakfan gs njsifnsdjjjdfndjnfsdjkfsd jn sjgkndsjngkjsndgkjnsdjkfnsdnfvkjsdnvkjsd jv jksnvkjsngjsnjkfns jksnsjknjksndvjksndjgnsjkvsjkdnvcjksdngjksdnjkfsnjk nsjkgnsjk nsjk nkjsn gjsnjk dnkjnvsjkn gjkenjk nskjnvjkensjknk ngjsnjk nvjknsj nvjsjdnvjksnev snvnxklv sj nejv sjk njcns jvsn jke  AFmsoafnasifunadsifa fasnfasfasf a anfjdsakfan gs njsifnsdjjjdfndjnfsdjkfsd jn sjgkndsjngkjsndgkjnsdjkfnsdnfvkjsdnvkjsd jv jksnvkjsngjsnjkfns jksnsjknjksndvjksndjgnsjkvsjkdnvcjksdngjksdnjkfsnjk nsjkgnsjk nsjk nkjsn gjsnjk dnkjnvsjkn gjkenjk nskjnvjkensjknk ngjsnjk nvjknsj nvjsjdnvjksnev snvnxklv sj nejv sjk njcns jvsn jke ",
+        descricao_pri: "A LIKE é uma empresa que atua no mercado de vendas de produtos online. Começamos como um pequeno projeto e fomos evoluindo gradativamente. Atualmente conquistando diversos clientes e trazendo qualidade e confiabilidade.",
+        obj: "Objetivo Principal:",
+        descricao_sec: "Nosso objetivo é crescer cada vez mais e conquistando diversos mercados, em que poderemos levar nossa qualidade e confiança para cada vez mais pessoas.",
         img: lado_direito,
     },
 }
