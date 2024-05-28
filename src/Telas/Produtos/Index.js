@@ -1,9 +1,9 @@
 import React from 'react';
 import {FlatList} from 'react-native';
 
-import Topo from './Componentes/Topo'
-import Detalhes from './Componentes/Detalhes'
-import Item from './Componentes/Item'
+import Item from './Componentes/Item';
+import Topo from './Componentes/Topo';
+import Detalhes from './Componentes/Detalhes';
 
 export default function Produto({topo, detalhes, itens}){
 
