@@ -5,10 +5,9 @@ import Card from './Componentes/Carde';
 import Texto from '../../componentes/Texto';
 import style from './Componentes/Estilizacao_Itens';
 
-export default function Produtos({detalhes, itens}){
+export default function Produtos({itens}){
 
     return <View style={style.container}>
-            <Texto>{itens.titulo}</Texto>
             <FlatList 
                 data={itens.lista}
                 renderItem={Card}
