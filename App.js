@@ -69,7 +69,7 @@ function MenuAudio(){
   }, [audioStatus]);
 
   return <TouchableOpacity onPress={() => { if(!loading) {setAudioStatus(!audioStatus);}}}>
-            <Texto>🎧 On/Off</Texto>
+            <Texto>🎧 Liga/Desliga</Texto>
           </TouchableOpacity>
 }
 
