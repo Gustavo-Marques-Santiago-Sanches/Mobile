@@ -29,6 +29,36 @@ const styles = StyleSheet.create({
         marginLeft: 15,
         width: 190,
         height: 190,
+    },
+    video: {
+        width:320,
+        height: 200,
+        marginLeft: 45,
+        borderRadius: 10,
+    },
+    input_texto:{
+        height: 40,
+        color: "white",
+        margin: 20,
+        borderWidth: 1,
+        borderStyle: 'solid',
+        borderColor: "white",
+        borderRadius: 10,
+        paddingHorizontal: 10,
+    },
+    botao:{
+        marginLeft: 30,
+        marginBottom: 15,
+        width: "85%",
+        height: 35,
+        backgroundColor: "gold",
+    },
+    texto_botao:{
+        color: "black",
+        fontSize: 14,
+        fontWeight: "bold",
+        textAlign: "center",
+        paddingTop: 7.5,
     }
 })
 

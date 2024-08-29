@@ -10,9 +10,11 @@ import Texto from './src/componentes/Texto';
 import Produto from './src/Telas/Produtos/Index';
 import Sobre from './src/Telas/Sobre/Sobre_Nos';
 import Item from './src/Telas/Itens/Produtos';
+import Lista from './src/Telas/lista_desejos/lista';
 import mockProd from './src/mocks/Produto';
 import mockSobre from './src/mocks/Sobre';
 import mockItem from './src/mocks/Item';
+import mockDesejo from './src/mocks/Desejo';
 
 //Audio
 import {Audio} from 'expo-av';
@@ -34,6 +36,12 @@ function Itens(){
           <Item {...mockItem}/>
         </View>
 }
+
+function ListaDesejos(){
+  return <Lista/>
+
+}
+
 
 function MenuAudio(){
 
@@ -108,7 +116,7 @@ function TabsMenu(){
             <Tab.Screen name="Sobre nós" component={SobreN}/>
             <Tab.Screen name="Kit" component={MenuKit}/>
             <Tab.Screen name="Produtos" component={Itens}/>
-            <Tab.Screen name="Lista de Desejos" component={MenuKit}/>
+            <Tab.Screen name="Lista de Desejos" component={ListaDesejos}/>
           </Tab.Navigator>
 }
 
