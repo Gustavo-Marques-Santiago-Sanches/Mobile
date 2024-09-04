@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     video: {
         width:320,
         height: 200,
-        marginLeft: 45,
+        marginHorizontal: 45,
         borderRadius: 10,
     },
     input_texto:{
@@ -47,11 +47,12 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
     },
     botao:{
-        marginLeft: 30,
+        marginHorizontal: 30,
         marginBottom: 15,
         width: "85%",
         height: 35,
         backgroundColor: "gold",
+        borderRadius: 5,
     },
     texto_botao:{
         color: "black",
