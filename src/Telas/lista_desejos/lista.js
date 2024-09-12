@@ -1,6 +1,8 @@
 import { Camera, CameraType } from 'expo-camera';
 import { useState, useRef, useEffect } from 'react';
-import { Button, StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
+import { Button, StyleSheet, Text, TouchableOpacity, View, Image, TextInput } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { Card } from 'react-native-paper';
 
 export default function App() {
   const [facing, setFacing] = useState(CameraType.back);
@@ -29,7 +31,7 @@ export default function App() {
     // Camera permissions are not granted yet.
     return (
       <View style={styles.container}>
-        <Text style={styles.mensagem}>We need your permission to show the camera</Text>
+        <Text style={styles.mensagem}>Para utilizar a câmera, é necessário sua permissão. Você permite?</Text>
         <Button onPress={requestPermission} title="Grant Permission" />
       </View>
     );
@@ -52,19 +54,27 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.cameraContainer}>
         <Camera style={styles.camera} type={facing} ref={cameraRef}>
           <View style={styles.botaoContainer}>
             <TouchableOpacity style={styles.botao} onPress={toggleCameraFacing}>
-              <Text style={styles.text}>Girar Câmera</Text>
+              <Ionicons name='reload' size={30} color="#FFF"></Ionicons>
             </TouchableOpacity>
             <TouchableOpacity style={styles.botao} onPress={takePicture}>
-              <Text style={styles.text}>Tirar Foto</Text>
+            <Ionicons name='camera' size={30} color="#FFF"></Ionicons>
             </TouchableOpacity>
           </View>
         </Camera>
+        <Card mode='elevated'>
+          <Card.Content>
+            <Text>Nome Completo:</Text>
+            <TextInput value='Seu nome completo'></TextInput>
+            <Text>Email:</Text>
+            <TextInput value='Seu e-mail de contato'></TextInput>
+            <Text>Whatsapp:</Text>
+            <TextInput keyboardType='numeric' value='(11) xxxxx-xxxx'></TextInput>
+          </Card.Content>
+        </Card>
         {photoUri && <Image source={{ uri: photoUri }} style={styles.foto} />}
-      </View>
     </View>
   );
 }
@@ -78,17 +88,19 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingBottom: 10,
   },
-  cameraContainer: {
-    flex: 1,
-  },
   camera: {
-    flex: 1,
+    alignSelf: 'center',
+    width: '90%',
+    height: '55%',
   },
   botaoContainer: {
+    // width: '100%',
+    height: '100%',
     flexDirection: 'row',
+    alignItems: 'flex-end',
+    // marginEnd: 10,
     justifyContent: 'space-between',
     backgroundColor: 'transparent',
-    margin: 20,
   },
   botao: {
     padding: 10,

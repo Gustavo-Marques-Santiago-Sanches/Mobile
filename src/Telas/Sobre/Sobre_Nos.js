@@ -8,7 +8,7 @@ import { Camera, CameraType } from 'expo-camera';
 import Style from './Bonito/Detalhamento'; //CSS
 import Texto from '../../componentes/Texto'; //Componente de exibição de texto
 
-import Video_ursinhos from '../../../assets/ursinhos_video.mp4';
+import Video_ursinhos from '../../../assets/Comercial Ursinhos.mp4';
 
 
 

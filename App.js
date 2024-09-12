@@ -55,7 +55,7 @@ function MenuAudio(){
       console.log('status', audioStatus);
       if (audioStatus) {
         setLoading(true);
-        const { sound } = await Audio.Sound.createAsync(require('./assets/acdc_highway_to_hell.mp3'));
+        const { sound } = await Audio.Sound.createAsync(require('./assets/Ursinhos.mp3'));
         setSound(sound);
         try {
           await sound.playAsync();
