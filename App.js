@@ -10,11 +10,11 @@ import Texto from './src/componentes/Texto';
 import Produto from './src/Telas/Produtos/Index';
 import Sobre from './src/Telas/Sobre/Sobre_Nos';
 import Item from './src/Telas/Itens/Produtos';
-import Lista from './src/Telas/lista_desejos/lista';
+// import Lista from './src/Telas/Lista_desejos/Lista';
+import Perfil from './src/Telas/Perfil/Info';
 import mockProd from './src/mocks/Produto';
 import mockSobre from './src/mocks/Sobre';
 import mockItem from './src/mocks/Item';
-import mockDesejo from './src/mocks/Desejo';
 
 //Audio
 import {Audio} from 'expo-av';
@@ -37,11 +37,15 @@ function Itens(){
         </View>
 }
 
-function ListaDesejos(){
-  return <Lista/>
+function PerfilTab(){
+  return <Perfil/>
 
 }
 
+// function ListaDesejos(){
+//   return <Lista/>
+
+// }
 
 function MenuAudio(){
 
@@ -106,6 +110,11 @@ function TabsMenu(){
                 ? 'heart'
                 : 'heart-outline';
               }
+              else if(route.name === "Perfil"){
+                iconName = focused
+                ? 'person'
+                : 'person-outline';
+              }
 
               return <Ionicons name={iconName} size={size} color={color}/>
             },
@@ -116,7 +125,8 @@ function TabsMenu(){
             <Tab.Screen name="Sobre nós" component={SobreN}/>
             <Tab.Screen name="Kit" component={MenuKit}/>
             <Tab.Screen name="Produtos" component={Itens}/>
-            <Tab.Screen name="Lista de Desejos" component={ListaDesejos}/>
+            <Tab.Screen name="Lista de Desejos" component={MenuKit}/>
+            <Tab.Screen name="Perfil" component={PerfilTab}/>
           </Tab.Navigator>
 }
 
