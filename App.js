@@ -10,7 +10,7 @@ import Texto from './src/componentes/Texto';
 import Produto from './src/Telas/Produtos/Index';
 import Sobre from './src/Telas/Sobre/Sobre_Nos';
 import Item from './src/Telas/Itens/Produtos';
-// import Lista from './src/Telas/Lista_desejos/Lista';
+import Lista_Desejos from './src/Telas/ListaDesejos/lista';
 import Perfil from './src/Telas/Perfil/Info';
 import mockProd from './src/mocks/Produto';
 import mockSobre from './src/mocks/Sobre';
@@ -125,7 +125,7 @@ function TabsMenu(){
             <Tab.Screen name="Sobre nós" component={SobreN}/>
             <Tab.Screen name="Kit" component={MenuKit}/>
             <Tab.Screen name="Produtos" component={Itens}/>
-            <Tab.Screen name="Lista de Desejos" component={MenuKit}/>
+            <Tab.Screen name="Lista de Desejos" component={Lista_Desejos}/>
             <Tab.Screen name="Perfil" component={PerfilTab}/>
           </Tab.Navigator>
 }
