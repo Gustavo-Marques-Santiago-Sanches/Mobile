@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from "react";
-import { View, FlatList } from "react-native";
+import { View, FlatList, Alert } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useNavigation } from "@react-navigation/native";
 
 import Texto from '../../componentes/Texto';
 import ListaItem from "./listaItem";
-import styles from "./estilos"
+import styles from "./estilos";
+import Botao from "../Produtos/Componentes/Botao";
 
 export default function Lista(){
 
@@ -22,7 +24,17 @@ export default function Lista(){
     //Carrega a lista quando o componente for montado
     useEffect(()=>{
         loadListData();
-    }, [])
+    }, []);
+
+    const navigation = useNavigation();
+
+    //Função para limpar a Lista de Desejos
+    const clearAsyncStorage = async () => {
+        await AsyncStorage.clear();
+        console.log('AsyncStorage apagado com sucesso');
+        Alert.alert("Lista de Desejos foi excluida com sucesso.");
+        navigation.reset({index: 0, routes: [{name: 'Lista de Desejos'}]});
+    }
 
     return <View style={styles.listaContainer}>
             <Texto style={styles.titulo}>Lista de Desejos</Texto>
@@ -34,5 +46,6 @@ export default function Lista(){
                 keyExtractor={({id})=>String(id)}
                 numColumns={2}
             />
+            <Botao textoBotao={"Apagar Lista de Desejos"} clickBotao={()=> clearAsyncStorage()}></Botao>
     </View>
 }

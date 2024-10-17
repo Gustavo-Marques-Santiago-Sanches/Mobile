@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     },
     cardContainer: {
         width: '50%',
+        marginBottom: 10,
     },
     imagem: {
         width: '100%',
@@ -36,6 +37,9 @@ const styles = StyleSheet.create({
     textoLista: {
         fontSize: 16,
         paddingBottom: 10,
+    },
+    lixeira: {
+        alignSelf: "center",
     }
 })
 
