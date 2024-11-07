@@ -1,8 +1,10 @@
 import { Camera, CameraType } from 'expo-camera';
 import { useState, useRef, useEffect } from 'react';
-import { Button, StyleSheet, Text, TouchableOpacity, View, Image, TextInput } from 'react-native';
+import { Button, StyleSheet, Text, TouchableOpacity, View, Image, TextInput, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Card } from 'react-native-paper';
+
+import Texto from '../../componentes/Texto'; //Componente de exibição de texto
 
 export default function App() {
   const [facing, setFacing] = useState(CameraType.back);
@@ -64,7 +66,7 @@ export default function App() {
             </TouchableOpacity>
           </View>
         </Camera>
-        <Card mode='elevated'>
+        <Card mode='elevated' style={styles.info}>
           <Card.Content>
             <Text>Nome Completo:</Text>
             <TextInput value='Seu nome completo'></TextInput>
@@ -75,14 +77,21 @@ export default function App() {
           </Card.Content>
         </Card>
         {photoUri && <Image source={{ uri: photoUri }} style={styles.foto} />}
+        <Texto style={styles.sugestao}>Tem alguma sugestão para o nosso aplicativo? Nos diga, ficaremos agradecidos pelo opoio!</Texto>
+        <TextInput style={styles.input_texto} placeholder='Digite sua sugestão'/>
+        <TouchableOpacity style={styles.botao_submit} onPress={() => Alert.alert('Sua sugestão foi mandada com sucesso!')}>
+          <Texto style={styles.texto_botao}>Mandar Sugestão</Texto>  
+        </TouchableOpacity>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    padding: 0,
     flex: 1,
     justifyContent: 'center',
+    backgroundColor: 'white',
   },
   mensagem: {
     textAlign: 'center',
@@ -117,4 +126,47 @@ const styles = StyleSheet.create({
     width: '100%',
     resizeMode: 'contain',
   },
+  info: {
+    marginTop: '2%',
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderColor: 'black',
+    width: '90%',
+    height: '24%',
+    marginLeft: '5%',
+  },
+  sugestao: {
+    fontWeight: 'bold',
+    width: '89%',
+    marginTop: 10,
+    marginBottom: 0,
+    marginHorizontal: 20,
+    textAlign: 'justify',
+  },
+  input_texto:{
+    height: 40,
+    width: '90%',
+    color: "black",
+    marginVertical: 10,
+    marginHorizontal: 20,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: "black",
+    borderRadius: 10,
+    paddingHorizontal: 10,
+  },
+  botao_submit:{
+    marginHorizontal: 20,
+    width: "90%",
+    height: 35,
+    backgroundColor: "gold",
+    borderRadius: 5,
+  },
+  texto_botao:{
+    color: "black",
+    fontSize: 14,
+    fontWeight: "bold",
+    textAlign: "center",
+    paddingTop: 7.5,
+  }
 });

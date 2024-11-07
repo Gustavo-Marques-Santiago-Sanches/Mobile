@@ -47,11 +47,11 @@ export default function Lista(){
     }
 
     async function api() {
-        const num = getRandomInt(10, 50);
+        const num = getRandomInt(1, 20);
         const numTexto = JSON.stringify(num);
         console.log(numTexto);
     
-            const response = await axios.get('https://api.escuelajs.co/api/v1/products/' + numTexto);
+            const response = await axios.get('https://fakestoreapi.com/products/' + numTexto);
             
             // Acessamos o corpo da resposta:
             const data = response.data;
@@ -59,7 +59,7 @@ export default function Lista(){
             
             // Acessando informações específicas
             setapiNome(data.title);
-            setapiImagem(data.images[0]);
+            setapiImagem(data.image);
             
             // console.log(nome, imagem);
     }
@@ -68,9 +68,9 @@ export default function Lista(){
             <Texto style={styles.titulo}>Lista de Desejos</Texto>
             <Botao textoBotao={"Sugestões de Item"} clickBotao={()=> api()}></Botao>
             {apiImagem &&
-                <Card mode='contained' style={styles.card}>
+                <Card mode='contained' style={styles.card_API}>
                     <Card.Content>
-                        <Card.Cover source={{uri : apiImagem}} style={styles.imagem}/>
+                        <Card.Cover source={{uri : apiImagem}} style={styles.imagem_API} resizeMode='contain'/>
                         <Texto style={styles.nomeProduto}>{apiNome}</Texto>
                     </Card.Content>
                 </Card>

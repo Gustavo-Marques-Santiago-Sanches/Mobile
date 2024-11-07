@@ -1,9 +1,6 @@
 import React, {useState} from 'react';
 import {ScrollView, Image} from 'react-native';
 import {Video, ResizeMode} from 'expo-av';
-import { TextInput } from 'react-native';
-import { TouchableOpacity, Alert } from 'react-native';
-import { Camera, CameraType } from 'expo-camera';
 
 import Style from './Bonito/Detalhamento'; //CSS
 import Texto from '../../componentes/Texto'; //Componente de exibição de texto
@@ -30,10 +27,5 @@ export default function Sobre({tela}){
       resizeMode={ResizeMode.CONTAIN}
       isLooping
       onPlaybackStatusUpdate={status => setStatus(() => status)}/>
-    <TextInput style={Style.input_texto} placeholder='Digite alguma coisa'/>
-    <TouchableOpacity style={Style.botao} onPress={() => Alert.alert('O botão foi clicado.')}>
-      <Texto style={Style.texto_botao}>Clique Aqui</Texto>  
-    </TouchableOpacity>
-    <Camera  ></Camera>
   </ScrollView>
 }

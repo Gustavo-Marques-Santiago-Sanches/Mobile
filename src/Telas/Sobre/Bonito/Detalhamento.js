@@ -35,31 +35,10 @@ const styles = StyleSheet.create({
         height: 200,
         marginHorizontal: 45,
         borderRadius: 10,
-    },
-    input_texto:{
-        height: 40,
-        color: "white",
-        margin: 20,
-        borderWidth: 1,
+        marginBottom: 20,
         borderStyle: 'solid',
-        borderColor: "white",
-        borderRadius: 10,
-        paddingHorizontal: 10,
-    },
-    botao:{
-        marginHorizontal: 30,
-        marginBottom: 15,
-        width: "85%",
-        height: 35,
-        backgroundColor: "gold",
-        borderRadius: 5,
-    },
-    texto_botao:{
-        color: "black",
-        fontSize: 14,
-        fontWeight: "bold",
-        textAlign: "center",
-        paddingTop: 7.5,
+        borderWidth: 2,
+        borderColor: 'white',
     }
 })
 
